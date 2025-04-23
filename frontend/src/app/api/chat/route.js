@@ -11,7 +11,7 @@ export async function POST(req) {
     const collectionName = body.collection_name;
     let flaskEndpoint = `${API_BASE_URL}/answer_in_general`; // Default endpoint
 
-    if (["divorce","housing", "inheritance", "LandAcquisition", "MPdata"].includes(collectionName)) {
+    if (["housing", "inheritance", "LandAcquisition", "MPdata"].includes(collectionName)) {
       flaskEndpoint = `${API_BASE_URL}/answer_in_specific`;
     } else if (collectionName === "general") {
       flaskEndpoint = `${API_BASE_URL}/answer_in_general`;
