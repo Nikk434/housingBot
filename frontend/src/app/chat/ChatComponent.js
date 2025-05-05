@@ -74,7 +74,7 @@ export default function ChatPage() {
 
   const startingQuestions = [
     "What documents do I need for buying a house?",
-    "What is property registration?"
+    "What are the steps involved in property registration?"
     // "What legal documents do I need for mutual divorce?",
     // "How can the 6 months \"cooling period\" be avoided?"
   ];
@@ -1067,7 +1067,7 @@ export default function ChatPage() {
                       )}
                     </div>
                   </div>
-                  <p className="whitespace-pre-wrap text-sm  font-dm-sans">
+                  <p className="whitespace-pre-wrap break-words break-all text-sm  font-dm-sans">
                     {message.text}
                   </p>
                 </div>
