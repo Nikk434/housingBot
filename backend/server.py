@@ -210,9 +210,10 @@ def answer_in_specific():
                 collection_name=collection,
                 embeddings=embeddings,
             ).as_retriever()
-            contextualize_q_system_prompt = """Given a chat history and the latest user question, reformulate the latest question into a standalone version. 
+            contextualize_q_system_prompt = """Given a chat history and the latest user question, which might reference context from earlier in the conversation, 
+reformulate the latest question into a standalone version that can be understood without the chat history. 
 If the question is out of context or outside the domain of housing, inform the user accordingly. 
-Do NOT answer the question only reformulate it if needed, or return it as is if it's already self-contained."""
+Do NOT answer the question—only reformulate it if needed, or return it as is if it's already self-contained."""
             contextualize_q_prompt = ChatPromptTemplate.from_messages(
                 [
                     ("system", contextualize_q_system_prompt),
