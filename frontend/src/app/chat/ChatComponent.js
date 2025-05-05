@@ -470,7 +470,7 @@ export default function ChatPage() {
       // Format references into a string if available
       const referencesText =
         references.length > 0
-        ? `\n\n📚 *References:*\n${references.map((ref) => `• ${ref.slice(0, 35)}${ref.length > 35 ? '…' : ''}`).join("\n")}`
+        ? `\n\n📚 *References:*\n${references.map((ref) => `• ${ref.slice(0, 25)}${ref.length > 25 ? '…' : ''}`).join("\n")}`
 
           : "";
     
@@ -1024,7 +1024,7 @@ export default function ChatPage() {
               className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"
                 } animate-fade-in ${baseTheme.transition}`}
             >
-              <div className="flex items-start max-w-[80%] md:max-w-[70%]">
+              <div className="flex items-start max-w-[90%] md:max-w-[80%]">
                 {message.sender === "bot" && (
                   <div
                     className={`flex-shrink-0 h-8 w-8 rounded-full bg-[#4267B2] flex items-center justify-center mr-2 mt-1`}
