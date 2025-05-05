@@ -294,7 +294,7 @@ export default function ChatPage() {
     // localStorage.setItem("sessionId", newSession);
     localStorage.removeItem(`chat_${sessionId}`);
     localStorage.removeItem(`conversations`);
-    localStorage.clear();
+    // localStorage.clear();
     // console.log(localStorage);
   };
 
@@ -470,7 +470,8 @@ export default function ChatPage() {
       // Format references into a string if available
       const referencesText =
         references.length > 0
-          ? `\n\n📚 *References:*\n${references.map((ref) => `• ${ref}`).join("\n")}`
+        ? `\n\n📚 *References:*\n${references.map((ref) => `• ${ref.slice(0, 40)}${ref.length > 40 ? '…' : ''}`).join("\n")}`
+
           : "";
     
       const fullResponse = botResponseText + referencesText;
@@ -1067,7 +1068,7 @@ export default function ChatPage() {
                       )}
                     </div>
                   </div>
-                  <p className="whitespace-pre-wrap break-words break-all text-sm  font-dm-sans">
+                  <p className="whitespace-pre-wrap text-sm  font-dm-sans">
                     {message.text}
                   </p>
                 </div>
