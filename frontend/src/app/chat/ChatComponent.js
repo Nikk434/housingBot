@@ -294,7 +294,7 @@ export default function ChatPage() {
     // localStorage.setItem("sessionId", newSession);
     localStorage.removeItem(`chat_${sessionId}`);
     localStorage.removeItem(`conversations`);
-    // localStorage.clear();
+    localStorage.clear();
     // console.log(localStorage);
   };
 
@@ -669,6 +669,7 @@ export default function ChatPage() {
               <div className="flex items-center text-xs text-blue-100 opacity-80 mt-0.5 font-dm-sans">
                 <Book size={12} className="mr-1" />
                 <span>{collectionName}</span>
+                {/* change to housing */}
               </div>
             </div>
           </div>
