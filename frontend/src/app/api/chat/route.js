@@ -11,11 +11,12 @@ export async function POST(req) {
     const collectionName = body.collection_name;
     let flaskEndpoint = `${API_BASE_URL}/answer_in_general`; // Default endpoint
 
-    if (["housing", "inheritance", "LandAcquisition", "MPdata"].includes(collectionName)) {
+    if (["housing","housing_new_index", "inheritance", "LandAcquisition", "MPdata"].includes(collectionName)) {
       flaskEndpoint = `${API_BASE_URL}/answer_in_specific`;
-    } else if (collectionName === "general") {
-      flaskEndpoint = `${API_BASE_URL}/answer_in_general`;
-    }
+    } 
+    // else if (collectionName === "general") {
+    //   flaskEndpoint = `${API_BASE_URL}/answer_in_general`;
+    // }
 
     // Send request to Flask backend
     const response = await axios.post(flaskEndpoint, body);
