@@ -470,7 +470,7 @@ export default function ChatPage() {
       // Format references into a string if available
       const referencesText =
         references.length > 0
-        ? `\n\n📚 *References:*\n${references.map((ref) => `• ${ref.slice(0, 40)}${ref.length > 40 ? '…' : ''}`).join("\n")}`
+        ? `\n\n📚 *References:*\n${references.map((ref) => `• ${ref.slice(0, 35)}${ref.length > 35 ? '…' : ''}`).join("\n")}`
 
           : "";
     
