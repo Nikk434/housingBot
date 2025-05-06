@@ -669,7 +669,7 @@ export default function ChatPage() {
               </div>
               <div className="flex items-center text-xs text-blue-100 opacity-80 mt-0.5 font-dm-sans">
                 <Book size={12} className="mr-1" />
-                <span>{collectionName}</span>
+                <span>housing</span>
                 {/* change to housing */}
               </div>
             </div>
