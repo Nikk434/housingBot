@@ -187,16 +187,16 @@ def answer_in_specific():
         if not user_input or not session_id:
             return jsonify({"error": "Missing message or session ID"}), 400
         print("Embeddings initializing started")
-        # embeddings = HuggingFaceEmbeddings(
-        #     model_name="intfloat/multilingual-e5-base",
-        #     model_kwargs={"device": device},
-        #     multi_process=False,
-        #     encode_kwargs={"device": device},
-        # )
-        embeddings = HuggingFaceInferenceAPIEmbeddings(
-            api_key=HF_INFERENCE_KEY,
+        embeddings = HuggingFaceEmbeddings(
             model_name="intfloat/multilingual-e5-base",
+            model_kwargs={"device": "cpu"},
+            multi_process=False,
+            encode_kwargs={"device": "cpu"},
         )
+        # embeddings = HuggingFaceInferenceAPIEmbeddings(
+        #     api_key=HF_INFERENCE_KEY,
+        #     model_name="intfloat/multilingual-e5-base",
+        # )
         print("Embeddings initializing Completed")
         
 
