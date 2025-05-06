@@ -42,7 +42,7 @@ export default function ChatPage() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [collectionName, setCollectionName] = useState("housing");
+  const [collectionName, setCollectionName] = useState("housing_new_index");
   const [sessionId, setSessionId] = useState("");
   const [language, setLanguage] = useState("English");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -669,7 +669,7 @@ export default function ChatPage() {
               </div>
               <div className="flex items-center text-xs text-blue-100 opacity-80 mt-0.5 font-dm-sans">
                 <Book size={12} className="mr-1" />
-                <span>housing</span>
+                <span>{collectionName}</span>
                 {/* change to housing */}
               </div>
             </div>
