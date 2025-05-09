@@ -42,7 +42,7 @@ export default function ChatPage() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [collectionName, setCollectionName] = useState("housing_new_index");
+  const [collectionName, setCollectionName] = useState("housing");
   const [sessionId, setSessionId] = useState("");
   const [language, setLanguage] = useState("English");
   const [menuOpen, setMenuOpen] = useState(false);
