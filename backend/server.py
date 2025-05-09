@@ -277,10 +277,10 @@ Do NOT answer the question—only reformulate it if needed, or return it as is i
             context = result["context"]
             for i in context:
                 filename = i.metadata.get("filename",i.metadata.get("source",""))
-                if filename and "\\" not in filename:
+                if filename and "\" not in filename:
                     references.append(filename.split(".")[0])
                 else:
-                    references.append(filename.split("\\")[-1].split(".")[0])
+                    references.append(filename.split("\")[-1].split(".")[0])
             return jsonify(
                 {"content": result["answer"], "references": list(set(references))}
             )
