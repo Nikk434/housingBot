@@ -5,7 +5,7 @@ export async function POST(req) {
     const body = await req.json(); // Parse request body
 
     // Base URL from environment variables (or fallback to localhost)https://divorce-bot-backend.nllnwr.easypanel.host
-    const API_BASE_URL = "https://housing-backend.nllnwr.easypanel.host";
+    const API_BASE_URL = "https://housingbot-2gun.onrender.com/";
 
     // Determine the correct Flask endpoint based on the collection name
     const collectionName = body.collection_name;
