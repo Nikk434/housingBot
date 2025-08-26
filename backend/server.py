@@ -84,7 +84,7 @@ CORS(app)  # Enable CORS for all routes
 
 
 BASE_PATH = "output/"
-ChatOpenAI.model_rebuild
+ChatOpenAI.model_rebuild()
 llm = ChatOpenAI(model=GROQ_MODEL, base_url=GROQ_URL, api_key=GROQ_API_KEY_VALUE)
 
 langfuse_handler = CallbackHandler(
